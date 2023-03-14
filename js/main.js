@@ -4,7 +4,7 @@ createApp({
     data() {
 
         return {
-
+            index: 0,
             slides: [
                 {
                     image: 'img/01.webp',
@@ -35,25 +35,43 @@ createApp({
 
     methods: {
 
-        onClick(event) {
+        nextClick() {
 
-            if (event.target.classList.contains('prev')) {
-                index++;
-                console.log(index);
-                if (index > this.slides.length - 2) {
-                    index = 0;
-                }
-            } else if (event.target.classList.contains('next')) {
-                index--;
-                console.log(index);
-                if (index <= 0) {
-                    index = this.slides.length;
-                }
+            this.index++;
+            
+            if (this.index > this.slides.length - 1) {
+                this.index = 0;
+               console.log(this.index); 
             }
-        }
+        },
+
+
+        prevClick() {
+            this.index--;
+            
+            if (this.index < 0) {
+                this.index = this.slides.length;
+               console.log(this.index); 
+            }
+        },
+
+        thumbSp(){
+            this.index = 0;
+        },
+        thumbRC(){
+            this.index = 1;
+        },
+        thumbFo(){
+            this.index = 2;
+
+        },
+        thumbStr(){
+            this.index = 3;
+        },
+        thumbAve(){
+            this.index = 4;
+        },
     }
-
-
 }).mount('#app');
 
 
