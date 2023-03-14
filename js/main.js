@@ -50,7 +50,7 @@ createApp({
             this.index--;
             
             if (this.index < 0) {
-                this.index = this.slides.length;
+                this.index = this.slides.length - 1;
                console.log(this.index); 
             }
         },
