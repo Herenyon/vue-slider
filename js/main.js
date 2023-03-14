@@ -71,7 +71,19 @@ createApp({
         thumbAve(){
             this.index = 4;
         },
-    }
+
+        
+    },
+//    mounted() {
+//         setInterval(() => {
+//             this.index = index++;
+//             if (this.index > this.slides.length - 1) {
+//                 this.index = 0;
+                
+//             }
+//             console.log(this.index);
+//         }, 3000);
+//     },
 }).mount('#app');
 
 
