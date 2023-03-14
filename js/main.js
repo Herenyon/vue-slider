@@ -38,52 +38,54 @@ createApp({
         nextClick() {
 
             this.index++;
-            
+
             if (this.index > this.slides.length - 1) {
                 this.index = 0;
-               console.log(this.index); 
+                console.log(this.index);
             }
+           
         },
 
 
         prevClick() {
             this.index--;
-            
+
             if (this.index < 0) {
                 this.index = this.slides.length - 1;
-               console.log(this.index); 
+                console.log(this.index);
             }
+            
         },
 
-        thumbSp(){
+        thumbSp() {
             this.index = 0;
         },
-        thumbRC(){
+        thumbRC() {
             this.index = 1;
         },
-        thumbFo(){
+        thumbFo() {
             this.index = 2;
 
         },
-        thumbStr(){
+        thumbStr() {
             this.index = 3;
         },
-        thumbAve(){
+        thumbAve() {
             this.index = 4;
         },
 
-        
+
     },
-//    mounted() {
-//         setInterval(() => {
-//             this.index = index++;
-//             if (this.index > this.slides.length - 1) {
-//                 this.index = 0;
-                
-//             }
-//             console.log(this.index);
-//         }, 3000);
-//     },
+    mounted() {
+        setInterval(() => {
+            this.index++;
+            if (this.index > this.slides.length - 1) {
+                this.index = 0;
+
+            }
+            console.log(this.index);
+        }, 3000);
+    },
 }).mount('#app');
 
 
